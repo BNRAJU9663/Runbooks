@@ -1,3 +1,12 @@
+### SSH CONFIGURATION USING SSH-KEYGEN AND PEM FILE 
+ssh-keygen -m PEM -t rsa -b 4096 -f ubuntu -C "your_email@example.com"
+openssl rsa -in ubuntu -outform pem > ubuntu.pem
+ssh-copy-id -i ubuntu ubuntu@8.8.8.8
+
+
+
+
+
 ### SSH certificates
 With SSH certificates, you generate a certificate authority (CA) and then use this to issue and cryptographically sign certificates 
 which can authenticate users to hosts, or hosts to users. You can generate a keypair using the ```ssh-keygen``` command, like this:
